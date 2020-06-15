@@ -1,3 +1,3 @@
-![Hey](https://github.com/Lygaen/utilities/workflows/maven.yml/badge.svg)
+[![Generic badge](https://img.shields.io/badge/USABLE-NO-RED.svg)](https://shields.io/)
 # utilities
 A Simple Spigot Plugin !
