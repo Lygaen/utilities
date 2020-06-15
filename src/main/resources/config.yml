@@ -7,6 +7,29 @@
 #. #######::::: ##::::'####: ########:'####:::: ##::::'####: ########:. ######::
 #:.......::::::..:::::....::........::....:::::..:::::....::........:::......:::
 
+
+
+
+
+# --- Placeholders ---
+# Place holders can be used anywhere, but if there is no player involved, you can't use the one
+# that aren't checked. (Even in commands) Here is the list :
+
+# - %player%         -> Get the player display name                      Player? ✔
+# - %player_exact%   -> Get the player exact name                        Player? ✔
+# - %x%              -> Get the player X coordinate                      Player? ✔
+# - %y%              -> Get the player Y coordinate                      Player? ✔
+# - %z%              -> Get the player Z coordinate                      Player? ✔
+# - %max_players%    -> Get the maximum of player allowed on the Server  Player? ✖
+# - %online_players% -> Get the number of online players                 Player? ✖
+# - %server_name%    -> Get the server name                              Player? ✖
+# - %server_motd%    -> Get the server motd                              Player? ✖
+
+
+
+
+
+# --- Config ---
 # Here is the Config file to personalize the plugin to fit your own Server !
 
 join_event: # Handling the event when a player join
