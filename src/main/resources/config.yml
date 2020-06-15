@@ -1,16 +1,29 @@
-join_event:
-  chat_message:
-    enabled: true
-    message: "[&2+&r] &4%player% &rjoined us !"
-  title_message:
-    enabled: true
-    title: "&4Welcome !"
-    subtitle: "&8Welcome &6%player% &8!"
-    fadein: 2
-    stay: 20
-    fadeout: 2
+# '##::::'##:'########:'####:'##:::::::'####:'########:'####:'########::'######::
+# ##:::: ##:... ##..::. ##:: ##:::::::. ##::... ##..::. ##:: ##.....::'##... ##:
+# ##:::: ##:::: ##::::: ##:: ##:::::::: ##::::: ##::::: ##:: ##::::::: ##:::..::
+# ##:::: ##:::: ##::::: ##:: ##:::::::: ##::::: ##::::: ##:: ######:::. ######::
+# ##:::: ##:::: ##::::: ##:: ##:::::::: ##::::: ##::::: ##:: ##...:::::..... ##:
+# ##:::: ##:::: ##::::: ##:: ##:::::::: ##::::: ##::::: ##:: ##:::::::'##::: ##:
+#. #######::::: ##::::'####: ########:'####:::: ##::::'####: ########:. ######::
+#:.......::::::..:::::....::........::....:::::..:::::....::........:::......:::
 
-leave_event:
-  chat_message:
-    enabled: true
-    message: "[&2-&r] &4%player% &rleft us !"
+# Here is the Config file to personalize the plugin to fit your own Server !
+
+join_event: # Handling the event when a player join
+
+  chat_message: # The Message in the chat
+    enabled: true # Enabled or Not
+    message: "[&2+&r] &4%player% &rjoined us !" # Message on itself
+
+  title_message: # A title when the player joins
+    enabled: true # Enabled or Not
+    title: "&4Welcome !" # Title
+    subtitle: "&8Welcome &6%player% &8!" # Subtitle - Action Bar
+    fadein: 2 # Fadein of the title
+    stay: 5 # Stay of the title
+    fadeout: 2 # Fadeout of the title
+
+leave_event: # Handling the event when a player leaves
+  chat_message: # The Message in the chat
+    enabled: true # Enabled or Not
+    message: "[&2-&r] &4%player% &rleft us !" # Message on itself
