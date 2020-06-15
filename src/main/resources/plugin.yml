@@ -1,0 +1,70 @@
+name: Utilities
+version: ${project.version}
+main: fr.lygaen.utilities.utilities.Utilities
+api-version: 1.13
+authors: [Lygaen]
+description: A plugin for simple Utilities in Minecraft
+commands:
+  broadcast:
+    description: Broadcast your Message !
+    usage: /<command> [message]
+    permission: utilities.broadcast
+    aliases:
+      - bcast
+      - bc
+  gmc:
+    description: Put you in Gamemode Creative (Or the Player targeted)
+    usage: /<command> [player=sender]
+    permission: utilities.gamemode.creative
+  gms:
+    description: Put you in Gamemode Survival (Or the Player targeted)
+    usage: /<command> [player=sender]
+    permission: utilities.gamemode.survival
+  gmsp:
+    description: Put you in Gamemode Spectator (Or the Player targeted)
+    usage: /<command> [player=sender]
+    permission: utilities.gamemode.spectator
+  gma:
+    description: Put you in Gamemode Adventure (Or the Player targeted)
+    usage: /<command> [player=sender]
+    permission: utilities.gamemode.adventure
+  fly:
+    description: Make you  allowed to Fly ! (Or the Player targeted)
+    usage: /<command> [player=sender]
+    permission: utilities.movements.fly
+permissions:
+  utilities.broadcast:
+    description: Allow you to use the /broadcast command
+    default: op
+  utilities.gamemode:
+    utilities.gamemode.creative:
+      description: Allow you to use the /gmc command
+      default: op
+    utilities.gamemode.creative.others:
+      description: Allow you to use the /gmc command
+      default: op
+    utilities.gamemode.survival:
+      description: Allow you to use the /gms command
+      default: op
+    utilities.gamemode.survival.others:
+      description: Allow you to use the /gms command
+      default: op
+    utilities.gamemode.spectator:
+      description: Allow you to use the /gmsp command
+      default: op
+    utilities.gamemode.spectator.others:
+      description: Allow you to use the /gms command
+      default: op
+    utilities.gamemode.adventure:
+      description: Allow you to use the /gma command
+      default: op
+    utilities.gamemode.adventure.others:
+      description: Allow you to use the /gma command
+      default: op
+  utilities.movements:
+    utilities.movements.fly:
+      description: Allow you to use the /fly command
+      default: op
+    utilities.movements.fly.others:
+      description: Allow you to use the /fly [player] command
+      default: op
