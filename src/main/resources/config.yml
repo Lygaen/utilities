@@ -24,6 +24,7 @@ join_event: # Handling the event when a player join
     fadeout: 2 # Fadeout of the title
 
 leave_event: # Handling the event when a player leaves
+
   chat_message: # The Message in the chat
     enabled: true # Enabled or Not
     message: "[&2-&r] &4%player% &rleft us !" # Message on itself
