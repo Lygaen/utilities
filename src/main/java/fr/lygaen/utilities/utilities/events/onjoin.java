@@ -11,6 +11,8 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import static fr.lygaen.utilities.utilities.others.replacer.placeholder;
+
 
 public class onjoin implements Listener {
 
@@ -25,25 +27,16 @@ public class onjoin implements Listener {
         }
         Player player = event.getPlayer();
         String message = config.getString("join_event.chat_message.message");
-        try {
-            message = message.replace("%player%", player.getDisplayName());
-        } catch (NullPointerException e) {}
-        message = ChatColor.translateAlternateColorCodes('&', message);
+        message = placeholder(message, player);
         event.setJoinMessage(message);
         if(!config.getBoolean("join_event.title_message.enabled")) {return;}
         String title = config.getString("join_event.title_message.title");
-        title = ChatColor.translateAlternateColorCodes('&', title);
-        try {
-            title = title.replace("%player%", player.getDisplayName());
-        } catch (NullPointerException e) {}
+        title = placeholder(title, player);
         String subtitle = config.getString("join_event.title_message.subtitle");
-        subtitle = ChatColor.translateAlternateColorCodes('&', subtitle);
-        try {
-            subtitle = subtitle.replace("%player%", player.getDisplayName());
-        } catch (NullPointerException e) {}
-        Integer fadein = config.getInt("join_event.title_message.fadein");
-        Integer stay = config.getInt("join_event.title_message.stay");
-        Integer fadeout = config.getInt("join_event.title_message.fadeout");
+        subtitle = placeholder(subtitle, player);
+        int fadein = config.getInt("join_event.title_message.fadein");
+        int stay = config.getInt("join_event.title_message.stay");
+        int fadeout = config.getInt("join_event.title_message.fadeout");
         event.getPlayer().sendTitle(title, subtitle, fadein, stay, fadeout);
     }
 
@@ -55,10 +48,7 @@ public class onjoin implements Listener {
         }
         Player player = event.getPlayer();
         String message = config.getString("leave_event.chat_message.message");
-        try {
-            message = message.replace("%player%", player.getDisplayName());
-        } catch (NullPointerException e) {}
-        message = ChatColor.translateAlternateColorCodes('&', message);
+        message = placeholder(message, player);
         event.setQuitMessage(message);
     }
 
