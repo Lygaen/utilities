@@ -1,11 +1,8 @@
 package fr.lygaen.utilities.utilities;
 
-
-import fr.lygaen.utilities.utilities.broadcast.BroadcastCommand;
 import fr.lygaen.utilities.utilities.loader.commands;
 import fr.lygaen.utilities.utilities.loader.events;
-import fr.lygaen.utilities.utilities.movements.MovementsCommand;
-import org.bukkit.command.CommandExecutor;
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Utilities extends JavaPlugin {
@@ -30,9 +27,14 @@ public final class Utilities extends JavaPlugin {
         commands.load();
 
         //---LOGS---
-        getLogger().info("Plugin Utilities Enabled");
+        getLogger().info(ChatColor.GREEN + "Plugin Utilities Enabled");
     }
 
+
+    @Override
+    public void onDisable() {
+        getLogger().info(ChatColor.RED + "Plugin Utilities Disabled");
+    }
 
     public static Utilities plugin() {
         return instance;

@@ -1,8 +1,6 @@
 package fr.lygaen.utilities.utilities.events;
 
 import fr.lygaen.utilities.utilities.Utilities;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -13,9 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import static fr.lygaen.utilities.utilities.others.replacer.placeholder;
 
-
-public class onjoin implements Listener {
-
+public class JoinQuit implements Listener {
     Utilities plugin = JavaPlugin.getPlugin(Utilities.class);
 
     @EventHandler
@@ -51,5 +47,4 @@ public class onjoin implements Listener {
         message = placeholder(message, player);
         event.setQuitMessage(message);
     }
-
 }

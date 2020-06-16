@@ -32,10 +32,27 @@ commands:
     description: Make you  allowed to Fly ! (Or the Player targeted)
     usage: /<command> [player=sender]
     permission: utilities.movements.fly
+  speed:
+    description: Change your speed to [int]
+    usage: /<command> [int]
+    permission: utilities.movements.speed
+  walkspeed:
+    description: Change your walk speed to [int]
+    usage: /<command> [int]
+    permission: utilities.movements.speed.walk
+  flyspeed:
+    description: Change your fly speed to [int]
+    usage: /<command> [player=sender]
+    permission: utilities.movements.speed.fly
+
 permissions:
+
+
   utilities.broadcast:
     description: Allow you to use the /broadcast command
     default: op
+
+
   utilities.gamemode:
     utilities.gamemode.creative:
       description: Allow you to use the /gmc command
@@ -61,10 +78,30 @@ permissions:
     utilities.gamemode.adventure.others:
       description: Allow you to use the /gma command
       default: op
+
+
   utilities.movements:
     utilities.movements.fly:
       description: Allow you to use the /fly command
       default: op
     utilities.movements.fly.others:
       description: Allow you to use the /fly [player] command
+      default: op
+    utilities.movements.speed:
+      description: Allow you to use the /speed command
+      default: op
+    utilities.movements.speed.others:
+      description: Allow you to use the /speed [player] command
+      default: op
+    utilities.movements.speed.walk:
+      description: Allow you to use the /walkspeed command
+      default: op
+    utilities.movements.speed.walk.others:
+      description: Allow you to use the /walkspeed [player] command
+      default: op
+    utilities.movements.speed.fly:
+      description: Allow you to use the /flyspeed command
+      default: op
+    utilities.movements.speed.fly.others:
+      description: Allow you to use the /flyspeed [player] command
       default: op
