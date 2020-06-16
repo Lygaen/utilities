@@ -8,6 +8,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.util.Objects;
+
 public class Gamemode implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -38,7 +40,7 @@ public class Gamemode implements CommandExecutor {
             }
         } else {
             Player player = Bukkit.getPlayerExact(args[0]);
-            if (player == null) {
+            if (!(sender instanceof Player)) {
                 sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RED + " This Player doesn't exist !");
                 return true;
             }
@@ -46,7 +48,7 @@ public class Gamemode implements CommandExecutor {
             String command_name = command.getName().toLowerCase();
             switch (command_name) {
                 case "gmc":
-                    if (!(player.hasPermission("utilities.gamemode.creative.others"))) {
+                    if (!(Objects.requireNonNull(player).hasPermission("utilities.gamemode.creative.others"))) {
                         sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RED + " You don't have the Permission !");
                         return true;
                     }
@@ -55,7 +57,7 @@ public class Gamemode implements CommandExecutor {
                     sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RESET + " Made " + player.getDisplayName() + " in Creative Gamemode !");
                     break;
                 case "gms":
-                    if (!(player.hasPermission("utilities.gamemode.survival.others"))) {
+                    if (!(Objects.requireNonNull(player).hasPermission("utilities.gamemode.survival.others"))) {
                         sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RED + " You don't have the Permission !");
                         return true;
                     }
@@ -64,7 +66,7 @@ public class Gamemode implements CommandExecutor {
                     sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RESET + " Made " + player.getDisplayName() + " in Survival Gamemode !");
                     break;
                 case "gmsp":
-                    if (!(player.hasPermission("utilities.gamemode.spectator.others"))) {
+                    if (!(Objects.requireNonNull(player).hasPermission("utilities.gamemode.spectator.others"))) {
                         sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RED + " You don't have the Permission !");
                         return true;
                     }
@@ -73,7 +75,7 @@ public class Gamemode implements CommandExecutor {
                     sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RESET + " Made " + player.getDisplayName() + " in Spectator Gamemode !");
                     break;
                 case "gma":
-                    if (!(player.hasPermission("utilities.gamemode.adventure.others"))) {
+                    if (!(Objects.requireNonNull(player).hasPermission("utilities.gamemode.adventure.others"))) {
                         sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RED + " You don't have the Permission !");
                         return true;
                     }
