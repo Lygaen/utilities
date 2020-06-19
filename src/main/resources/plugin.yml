@@ -44,8 +44,22 @@ commands:
     description: Change your fly speed to [int]
     usage: /<command> [player=sender]
     permission: utilities.movements.speed.fly
+  vanish:
+    description: Vanish you from other Payers
+    usage: /<command> [payer=sender]
+    permission: utilities.vanish
 
 permissions:
+
+  utilities.vanish:
+    description: Allow you to use the /vanish command
+    default: op
+  utilities.vanish.others:
+    description: Allow you to use the /vanish [player] command
+    default: op
+  utilities.vanish.see:
+    description: Allow you to see vanished players
+    default: op
 
 
   utilities.broadcast:
