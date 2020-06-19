@@ -4,6 +4,7 @@ import fr.lygaen.utilities.utilities.Utilities;
 import fr.lygaen.utilities.utilities.commands.Broadcast;
 import fr.lygaen.utilities.utilities.commands.Fly;
 import fr.lygaen.utilities.utilities.commands.Gamemode;
+import fr.lygaen.utilities.utilities.commands.Vanish;
 import org.bukkit.command.CommandExecutor;
 
 import java.util.Objects;
@@ -25,5 +26,7 @@ public class commands {
         Objects.requireNonNull(plugin.getCommand("speed")).setExecutor(fly);
         Objects.requireNonNull(plugin.getCommand("flyspeed")).setExecutor(fly);
         Objects.requireNonNull(plugin.getCommand("walkspeed")).setExecutor(fly);
+        CommandExecutor vanish = new Vanish();
+        Objects.requireNonNull(plugin.getCommand("vanish")).setExecutor(fly);
     }
 }
