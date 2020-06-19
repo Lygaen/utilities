@@ -30,9 +30,11 @@ public class Vanish implements Listener, CommandExecutor {
                 if (!pl.hasPermission("utilities.vanish.see")) {
                     pl.hidePlayer(Utilities.plugin(), p);
                 } else {
-                    if (pl == p) {continue;}
-                    if (pl != sender) {
-                        pl.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RESET + p.getDisplayName() + " is now vanished !");
+                    Player sender_ = (Player) sender;
+                    if (pl != p) {
+                        if (pl != sender_) {
+                            pl.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RESET + p.getDisplayName() + " is now vanished !");
+                        }
                     }
                 }
             }
