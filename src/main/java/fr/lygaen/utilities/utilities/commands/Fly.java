@@ -59,9 +59,10 @@ public class Fly implements CommandExecutor {
                             sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RED + " You need to give a number !");
                             return true;
                         }
-                        speed = speed * 10;
+                        speed = speed / 10;
                         ((Player) sender).setFlySpeed(speed);
                         ((Player) sender).setWalkSpeed(speed);
+                        speed = speed * 10;
                         sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RESET + " Set your speed to " + speed);
                     } else {
                         sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RED + " You need to be a player to do this command !");
@@ -84,9 +85,10 @@ public class Fly implements CommandExecutor {
                         sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RED + " You need to give a number !");
                         return true;
                     }
+                    speed = speed / 10;
+                    target.setFlySpeed(speed);
+                    target.setWalkSpeed(speed);
                     speed = speed * 10;
-                    ((Player) sender).setFlySpeed(speed);
-                    ((Player) sender).setWalkSpeed(speed);
                     sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RESET + " Set the speed of " + target.getDisplayName() + " to " + speed);
                     target.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RESET + " Set your speed to " + speed);
                 } else {
@@ -104,8 +106,9 @@ public class Fly implements CommandExecutor {
                             sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RED + " You need to give a number !");
                             return true;
                         }
-                        speed = speed * 10;
+                        speed = speed / 10;
                         ((Player) sender).setFlySpeed(speed);
+                        speed = speed * 10;
                         sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RESET + " Set your speed to " + speed);
                     } else {
                         sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RED + " You need to be a player to do this command !");
@@ -128,8 +131,9 @@ public class Fly implements CommandExecutor {
                         sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RED + " You need to give a number !");
                         return true;
                     }
+                    speed = speed / 10;
+                    target.setFlySpeed(speed);
                     speed = speed * 10;
-                    ((Player) sender).setFlySpeed(speed);
                     sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RESET + " Set the speed of " + target.getDisplayName() + " to " + speed);
                     target.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RESET + " Set your speed to " + speed);
                 } else {
@@ -147,8 +151,9 @@ public class Fly implements CommandExecutor {
                             sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RED + " You need to give a number !");
                             return true;
                         }
-                        speed = speed * 10;
+                        speed = speed / 10;
                         ((Player) sender).setWalkSpeed(speed);
+                        speed = speed * 10;
                         sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RESET + " Set your speed to " + speed);
                     } else {
                         sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RED + " You need to be a player to do this command !");
@@ -171,8 +176,9 @@ public class Fly implements CommandExecutor {
                         sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RED + " You need to give a number !");
                         return true;
                     }
+                    speed = speed / 10;
+                    target.setWalkSpeed(speed);
                     speed = speed * 10;
-                    ((Player) sender).setWalkSpeed(speed);
                     sender.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RESET + " Set the speed of " + target.getDisplayName() + " to " + speed);
                     target.sendMessage(ChatColor.BLUE + "[UTILS]" + ChatColor.RESET + " Set your speed to " + speed);
                 } else {
